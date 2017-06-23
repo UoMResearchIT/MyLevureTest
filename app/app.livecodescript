@@ -1,4 +1,4 @@
-script "app"
+﻿script "app"
 
 command PreloadApplication
   # Perform operations before stacks, extensions, and externals in app.yml are loaded.
@@ -17,10 +17,10 @@ command InitializeApplication
 
   # If this the first time application has run on this computer, call FirstRun
   # This method requires the preferences framework helper to be loaded.
-  if prefsGetPref("software build") is empty then
-    FirstRun
-    prefsSetPref "software build", levureAppGet("build")
-  end if
+#  if prefsGetPref("software build") is empty then
+#    FirstRun
+#    prefsSetPref "software build", levureAppGet("build")
+#  end if
 
   # Perform initialization operations every time application runs.
 
@@ -38,7 +38,9 @@ command OpenApplication
   # Open UI stack
 
   # Open the starter app sample window UI stack
-  go stack "LevureSampleWindow"
+  # go stack "LevureSampleWindow"
+  # Open Jim's UI 
+	go to stack "MyWindow"
 end OpenApplication
 
 
