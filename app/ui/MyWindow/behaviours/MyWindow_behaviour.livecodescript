@@ -14,3 +14,11 @@ end setOn
 command setOff
    set the text of field "Field" to "off"
 end setOff
+
+command displayBuildInfo
+   local tBuildString
+   put "Build: " & levureBuildProfile() into tBuildString
+   put " " & levureAppGet("version") after tBuildString
+   put "-" & levureAppGet("build") after tBuildString
+   answer tBuildString
+end displayBuildInfo

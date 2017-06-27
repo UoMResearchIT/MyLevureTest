@@ -1,6 +1,6 @@
-name:
+name: MyLevureTest
 version: 0.0.1
-build: 1
+build: 2
 encrypt stacks: false
 multiple instances: false
 relaunch in background: false
@@ -61,5 +61,6 @@ build profiles:
       linux:
       ios:
       android:
+  development:    
   release:
   beta:
